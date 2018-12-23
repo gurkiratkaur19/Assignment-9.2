@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           function Airplane(model, seatingCapacity, maxSpeed){
+               this.model= model;
+               this.seatingCapacity = seatingCapacity;
+               this.maxSpeed= maxSpeed;
+               this.prints = function(){
+                   return (this.model +" "+ this.seatingCapacity+" "+this.maxSpeed);
+               }
+           }
+
+           var obj1 = new Airplane("A1",3,120);
+           var obj2 = new Airplane("A2",5,130);
+           var obj3 = new Airplane("A3",6,120);
+
+           console.log(obj1.prints());
+           console.log(obj2.prints());
+           console.log(obj3.prints());
+
+           obj1.seatingCapacity = obj1.seatingCapacity + 10;
+           obj2.seatingCapacity = obj2.seatingCapacity + 10;
+           obj3.seatingCapacity = obj3.seatingCapacity + 10;
+
+           console.log(obj1.seatingCapacity);
+           console.log(obj2.seatingCapacity);
+           console.log(obj3.seatingCapacity);
+           
+           delete obj1.maxSpeed;
+           delete obj2.maxSpeed;
+           delete obj3.maxSpeed;
+
+           console.log(obj1.prints());
+           console.log(obj2.prints());
+           console.log(obj3.prints());
+
+           obj1.averageSpeed = 600;
+           obj2.averageSpeed = 600;
+           obj3.averageSpeed = 600;
+
+        </script>
+    </body>
+</html>
